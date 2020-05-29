@@ -1,6 +1,6 @@
 # Well Hello There
 
-This is a little template builder for Samasource using MJML. Really Simple to use. Let's get started.
+This is a little template builder for Hubspot using MJML. Really Simple to use. Let's get started.
 
 ### First Time Here?
 1. Clone Repo
@@ -18,5 +18,4 @@ This is a little template builder for Samasource using MJML. Really Simple to us
 
 ### Here's some tips
 
-* Wanna share your template quickly with someone? check out [surge.sh](surge.sh) and load up that template. You'll need to rename it as index.html, but hey, quick way to share, right?
 * Wanna get fancy with MJML? Check out their super simple documentation: [Check it out](https://mjml.io/documentation/) 
