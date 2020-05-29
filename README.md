@@ -15,8 +15,28 @@ This is a little template builder for Hubspot using MJML. Really Simple to use. 
 4. Use the proper `{{ module.your_field }}` in your MJML files and configure the fields in the modules in the `_dist/email_modules/your.module/fields.json`
 5. You can then create regular hubspot .html templates in `_dist/email_templates/`using HUBL and configure the npm scripts to upload to your portal if you like
 
+### Some Notes
+* Make sure your MJML module and static markup includes 
+```
+<mjml>
+<mj-include path="../required_markup/head.mjml" />
+<mj-body>
+<!--begin module-->
+```
 
-### Here's some tips
+at the top and 
+
+```
+<!--end module-->
+</mj-body>
+</mjml>
+```
+
+at the bottom. This is how MJML pulls in any styling and adds it inline in your html markup before.
+
+
+
+### Some More Thoughts
 
 * Wanna get fancy with MJML? Check out their super simple documentation: [Check it out](https://mjml.io/documentation/) 
 * Have a question? Have suggestion? Are my instructions terrible? Submit a pull request or contact me: douglaswelcome@gmail.com
