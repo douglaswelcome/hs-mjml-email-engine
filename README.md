@@ -10,12 +10,13 @@ This is a little template builder for Hubspot using MJML. Really Simple to use. 
 ### Wanna build some templates? Alright, I guess you can...
 
 1. Run `npm run email`
-2. This will watch `_src/email_markup/components` and `_src/email_markup/templates`
-3. Any changes will trigger the template builder and take any .mjml files in `/templates` and convert them into email ready .html files in `_dist/processed_templates/*`
-4. To get started, clone and rename `_src/templates/boiler_plate.mjml` and use `<mj-include path="../components/component_you_want.mjml"/>` in the tempalte file to build the template body.
-5. Open up `_dist/processed_templates/your_template.html` in a browser and soak in the magic.
+2. This will watch `_src/email_markup/`
+3. Any changes will trigger the build and take any .mjml modules and static in `_src` and convert them into module.html files in corresponding directories in `_dist/`
+4. Use the proper `{{ module.your_field }}` in your MJML files and configure the fields in the modules in the `_dist/email_modules/your.module/fields.json`
+5. You can then create regular hubspot .html templates in `_dist/email_templates/`using HUBL and configure the npm scripts to upload to your portal if you like
 
 
 ### Here's some tips
 
 * Wanna get fancy with MJML? Check out their super simple documentation: [Check it out](https://mjml.io/documentation/) 
+* Have a question? Have suggestion? Are my instructions terrible? Submit a pull request or contact me: douglaswelcome@gmail.com

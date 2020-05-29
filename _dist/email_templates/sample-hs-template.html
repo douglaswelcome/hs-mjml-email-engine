@@ -1,0 +1,14 @@
+{% extends '_dist/email_static/base.html' %}
+
+{% block email-body %}
+    {% include '_dist/email_static/header.html' %}
+
+    {% module "module_20200324172335" path="_dist/email_modules/image", label="Image" %}
+
+    {% module "module_19849801938493" path="_dist/email_modules/welcome", label="Welcome" %}
+
+
+    {% include '_dist/email_static/footer.html' %}
+    
+
+{% endblock %}

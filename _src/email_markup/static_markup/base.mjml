@@ -1,0 +1,10 @@
+<mjml>
+    <mj-include path="../required_markup/head.mjml" />
+    <mj-body>
+      <mj-raw>
+      {% block email-body %}
+
+      {% endblock %}
+    </mj-raw>
+    </mj-body>
+  </mjml>

@@ -1,13 +1,13 @@
 {
   "name": "sama_email_engine",
   "version": "1.0.0",
-  "description": "A small build of MJML to generate branded email templates for Samasource Engineering.",
+  "description": "Some tooling to convert MJML blocks into Hubspot email ready markup",
   "main": "index.js",
   "scripts": {
     "email:watch": "onchange '_src/email_markup/**/*' -- npm run email:process",
     "email:process": "./email_process.sh",
     "email": "npm run email:process && npm run email:watch ",
-    "email&upload": "concurrently --kill-others --raw \"npm run email:watch\" \"npx hs watch --portal=YOUR_PORTAL _dist/email_templates\""
+    "email&upload": "concurrently --kill-others --raw \"npm run email:watch\" \"npx hs watch --portal=YOUR_PORTAL _dist/email_templates . \""
   },
   "repository": {
     "type": "git",
