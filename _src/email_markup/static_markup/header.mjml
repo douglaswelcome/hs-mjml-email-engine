@@ -1,0 +1,14 @@
+<mjml>
+    <mj-include path="../required_markup/head.mjml" />
+    <mj-body>
+      <!--begin module-->
+            <mj-section >
+
+                <mj-column >
+                    <mj-image css-class="header-logo" src="https://media-exp1.licdn.com/dms/image/C4D03AQE8hzWilA6AAg/profile-displayphoto-shrink_200_200/0?e=1596067200&v=beta&t=nLQO5Eim63Gst8k9GlNV-eJYA5IfL4jpq5YYzFAnF_M" href="https://www.linkedin.com/in/douglaswelcome/" align="center" padding-bottom="0px" padding-top="0px"></mj-image>
+                </mj-column>
+    
+            </mj-section>
+    <!--end module-->
+</mj-body>
+</mjml>

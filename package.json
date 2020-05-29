@@ -1,0 +1,26 @@
+{
+  "name": "sama_email_engine",
+  "version": "1.0.0",
+  "description": "A small build of MJML to generate branded email templates for Samasource Engineering.",
+  "main": "index.js",
+  "scripts": {
+    "email:watch": "onchange '_src/email_markup/**/*' -- npm run email:process",
+    "email:process": "./email_process.sh",
+    "email": "npm run email:process && npm run email:watch ",
+    "email&upload": "concurrently --kill-others --raw \"npm run email:watch\" \"npx hs watch --portal=YOUR_PORTAL _dist/email_templates\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglaswelcome/sama_email_engine.git"
+  },
+  "author": "Douglas Welcome",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/douglaswelcome/sama_email_engine/issues"
+  },
+  "homepage": "https://github.com/douglaswelcome/sama_email_engine#readme",
+  "devDependencies": {
+    "mjml": "^4.6.3",
+    "onchange": "^7.0.2"
+  }
+}
