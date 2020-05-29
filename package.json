@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/douglaswelcome/hs-mjml-email-engine#readme",
   "devDependencies": {
+    "@hubspot/cms-cli": "^1.1.7",
     "mjml": "^4.6.3",
     "onchange": "^7.0.2"
   }
