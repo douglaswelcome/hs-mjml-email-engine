@@ -1,5 +1,5 @@
 {
-  "name": "sama_email_engine",
+  "name": "hs-mjml_email_engine",
   "version": "1.0.0",
   "description": "Some tooling to convert MJML blocks into Hubspot email ready markup",
   "main": "index.js",
