@@ -3,7 +3,7 @@
     <mj-body>
         <!--begin module-->
         <mj-section padding-top="54px" padding-bottom="26px">
-            <mj-column>
+            <mj-column >
                 <mj-text font-size="14px" padding-top="0px" padding-bottom="0px" line-height="1.5" align="center">
                     <h1> Welcome my little friend!</h1>
                     <p>Get in here and use this!</p>
