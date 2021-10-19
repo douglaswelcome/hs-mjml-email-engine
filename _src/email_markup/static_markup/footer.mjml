@@ -4,18 +4,14 @@
         <!--begin module-->
         <mj-wrapper padding="0px 15px 15px 15px">
             <mj-section css-class="round-border">
-
                 <mj-column background-color="#fff" vertical-align="bottom">
                     <mj-text>
                         <h1>Here's your footer</h1>
                         <p>Get started Son</p>
                     </mj-text>
-
                 </mj-column>
-
             </mj-section>
         </mj-wrapper>
-
         <!--end module-->
     </mj-body>
 </mjml>

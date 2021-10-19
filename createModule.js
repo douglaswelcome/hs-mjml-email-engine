@@ -53,6 +53,22 @@ const createMeta = (moduleName) => {
 
 }
 
+// create module.html
+const createHtml = (moduleName) => {
+    const markupDir = '_dist/email_modules/' + moduleName + '.module/module.html';
+    const markupContent = `{
+
+    }
+    `;
+    fs.writeFile(markupDir, markupContent, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("module.html created");
+    });
+
+}
+
 
 
 const createModule = (moduleName) => {
@@ -64,6 +80,7 @@ const createModule = (moduleName) => {
             createDir(moduleName);
             createFields(moduleName);
             createMeta(moduleName);
+            createHtml(moduleName);
 
         } else {
             console.log("Module Already Created")

@@ -5,17 +5,22 @@
   "main": "index.js",
   "scripts": {
     "modules:watch": "onchange '_src/email_markup/module_markup/*' -- npm run modules:process --file={{fileBaseNoExt}}",
-    "modules:process" : "npm run modules:create && npm run modules:mjml",
     "modules:create": "node createModule $npm_config_file",
     "modules:mjml": "mjml _src/email_markup/module_markup/$npm_config_file.mjml -o _dist/email_modules/$npm_config_file.module/module.html",
-    "modules:hubify": "",
+    "modules:hubify": "node hubifyModule $npm_config_file",
+    "modules:process" : "npm run modules:create && npm run modules:mjml && npm run modules:hubify",
 
-    "static:watch": "onchange '_src/email_markup/static_markup/*' -- npm run static:mjml --file={{fileBaseNoExt}}",
+    "static:watch": "onchange '_src/email_markup/static_markup/*' -- npm run static:process --file={{fileBaseNoExt}}",
+    "static:process": "npm run static:mjml && npm run static:hubify",
+    "static:hubify": "node hubifyStatic $npm_config_file",
     "static:mjml": "mjml _src/email_markup/static_markup/$npm_config_file.mjml -o _dist/email_static/$npm_config_file.html",
+
+    "required:watch": "onchange '_src/email_markup/static_markup/*' -- npm run next",
+    "processModules": "",
+    "processStatic": ""
     
   
-    "email": "npm run :process && npm run modules:watch && npm run static:watch ",
-    "email&upload": "concurrently --kill-others --raw \"npm run email:watch\" \"npx hs watch --portal=YOUR_PORTAL _dist/email_templates . \""
+
 
     
   },
