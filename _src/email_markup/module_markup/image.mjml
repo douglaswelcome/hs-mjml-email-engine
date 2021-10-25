@@ -1,13 +1,12 @@
 <mjml>
   <mj-include path="../required_markup/head.mjml" />
   <mj-body>
-    <!--begin module-->
+    <!-- begin module -->
     <mj-section padding-top="0px" padding-bottom="0px">
-      <mj-column >
-        <mj-image padding-top="0px" padding-bottom="15px" src='https://source.unsplash.com/random' href='https://source.unsplash.com/' />
-        <mj-image padding-top="0px" padding-bottom="15px" src='{{ module.your_image}}' href='{{ module.your_image.src }}' />
+      <mj-column>
+        <mj-image padding-top="0px" padding-bottom="15px" src='{{ module.image.src }}' href='https://source.unsplash.com/' />
       </mj-column>
     </mj-section>
-    <!--end module-->
+    <!-- end module -->
   </mj-body>
 </mjml>

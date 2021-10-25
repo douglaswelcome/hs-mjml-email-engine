@@ -4,7 +4,7 @@
 <head>
   <title>
   </title>
-  <!--[if !mso]><!-- -->
+  <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--<![endif]-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,12 +43,14 @@
     }
   </style>
   <!--[if mso]>
+        <noscript>
         <xml>
         <o:OfficeDocumentSettings>
           <o:AllowPNG/>
           <o:PixelsPerInch>96</o:PixelsPerInch>
         </o:OfficeDocumentSettings>
         </xml>
+        </noscript>
         <![endif]-->
   <!--[if lte mso 11]>
         <style type="text/css">
@@ -59,7 +61,7 @@
   </style>
 </head>
 
-<body>
+<body style="word-spacing:normal;">
   <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;"> {% text "Preview Text" no_wrapper=True label="Preview Text for Email Clients"%} </div>
   <div style> {% block email-body %} {% endblock %} </div>
 </body>

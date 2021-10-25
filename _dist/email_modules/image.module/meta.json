@@ -1,12 +1,6 @@
 {
-  "css_assets": [],
-  "external_js": [],
   "global": false,
-  "help_text": "",
-  "host_template_types": ["PAGE"],
-  "js_assets": [],
-  "other_assets": [],
+  "host_template_types": ["EMAIL"],
   "smart_type": "NOT_SMART",
-  "tags": [],
-  "is_available_for_new_content": false
+  "is_available_for_new_content": true
 }

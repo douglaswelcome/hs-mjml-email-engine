@@ -1,21 +1,32 @@
 <mjml>
     <mj-include path="../required_markup/head.mjml" />
     <mj-body>
-        <!--begin module-->
+        <!-- begin module -->
         <mj-wrapper padding="0px 15px 15px 15px">
             <mj-section css-class="round-border">
-
                 <mj-column background-color="#fff" vertical-align="bottom">
                     <mj-text>
                         <h1>Here's your footer</h1>
-                        <p>Get started Son</p>
+                        <p>Get started Sonny</p>
+                        <p >
+                            {{ site_settings.company_name }}
+                            {{ site_settings.company_street_address_1 }}
+                            {{ site_settings.company_street_address_2 }}
+                            {{ site_settings.company_city }}
+                            {{ site_settings.company_state }}]
+                            {{ site_settings.company_zip }}
+                            {{ site_settings.company_country }}
+                            <br/>
+                            You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+                            <br/>
+                            Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+                            <br/>
+                            <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
+                        </p>
                     </mj-text>
-
                 </mj-column>
-
             </mj-section>
         </mj-wrapper>
-
-        <!--end module-->
+        <!-- end module -->
     </mj-body>
 </mjml>

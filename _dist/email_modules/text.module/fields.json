@@ -1,0 +1,10 @@
+[{
+        "name": "richtext",
+        "label": "Rich text field",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "inline_help_text": "",
+        "help_text": "",
+        "default": null
+}]
