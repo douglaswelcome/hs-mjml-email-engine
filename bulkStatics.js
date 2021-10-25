@@ -14,9 +14,9 @@ let command = "npx mjml " + staticSrc + "*" + " -o " + staticDist;
 
 
 let markupify = () => {
-    return new Promise(function(resolve, reject) {
-    setTimeout( () => {
-      
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+
             runIt.execSync(command, (error, stdout, stderr) => {
                 if (error) {
                     console.log(`error: ${error.message}`);
@@ -29,14 +29,15 @@ let markupify = () => {
                 console.log(`stdout: ${stdout}`);
 
                 console.log("MJML executed");
-                
+
             });
             resolve();
-            }, 3000);
-        
+            console.log("Statics are Markup-i-fied");
+        }, 3000);
+
     });
 
-    };
+};
 
 
 
@@ -50,15 +51,16 @@ let hubify = () => {
         files.forEach(file => {
             fs.readFile(staticDist + file, 'utf8', (err, data) => {
                 if (err) throw err;
-                let start = "<!-- begin module -->";
-                let end = "<!-- end module -->";
-                if (data.indexOf(start) >= 0) {
-                    let firstSplit = data.split(start)[1];
-                    let secondSplit = firstSplit.split(end)[0];
-                    fs.writeFile(staticDist + file, secondSplit, 'utf8', (err, data) => {
+                let check = "<!-- begin module -->";
+                if(data.includes(check)){
+                    let search = /(?:<!-- begin module -->)([\s\S]*?)(?:<!-- end module -->)/g;
+                    let inner = data.match(search).join('\n');
+                    fs.writeFile(staticDist + file, inner, 'utf8', (err, data) => {
                         if (err) throw err;
                         console.log("The " + path.parse(file).name + " static markup is updated");
                     });
+                } else {
+                    console.log(file + " doesn't need hubifying")
                 }
             });
         })
@@ -66,5 +68,3 @@ let hubify = () => {
 }
 
 markupify().then(hubify);
-
-

@@ -20,7 +20,7 @@
         }
 
         h1 {
-            font-size:26px;
+            font-size:32px;
             font-family: Arial, sans-serif;
             line-height: 1;
         }
@@ -31,19 +31,20 @@
             text-transform: uppercase;
             color: #929294;
             line-height: 1;
+            
         }
 
         p, ul, ol, h1, h2, h3 {
-            padding:  0px 0px 15px 0px;
+            padding:  0px 0px 16px 0px;
             padding-top: 0px;
-            padding-bottom:15px;
+            padding-bottom:16px;
             margin: 0px;
             margin-top:0px;
             margin-bottom:0px;
         }
 
         ul, ol {
-            padding-left:25px!important;
+            padding-left:24px!important;
         }
 
         .header-logo {

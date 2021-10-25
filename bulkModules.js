@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const path = require('path');
 const runIt = require("child_process");
@@ -11,8 +10,8 @@ fs.readdir(moduleSrc, (err, files) => {
     if (err) {
         console.error("Could not list module mjml files", err);
         process.exit(1);
-      }
-      files.forEach(file => {
+    }
+    files.forEach(file => {
         // Parse out the Module Name
         let moduleName = path.parse(file).name;
         let moduleDist = '_dist/email_modules/' + moduleName + '.module/module.html';
@@ -33,41 +32,32 @@ fs.readdir(moduleSrc, (err, files) => {
         });
         fs.readFile(moduleDist, 'utf8', (err, data) => {
             if (err) throw err;
+            let search = /(?:<!-- begin module -->)([\s\S]*?)(?:<!-- end module -->)/g
+            let inner = data.match(search).join('\n')
+            fs.writeFile(file, inner, 'utf8', (err, data) => {
+                if (err) throw err;
+                console.log("The " + moduleName + " module markup is updated");
+            });
+        });
 
-            let start = "<!-- begin module -->";
-            let end = "<!-- end module -->";
 
-            
-            let firstSplit = data.split(start)[1];
-            
-            let secondSplit = firstSplit.split(end)[0];
-
-            console.log(secondSplit);
-
-            fs.writeFile(moduleDist, secondSplit, 'utf8', (err, data) => {
-            if (err) throw err;
-            console.log("The " + moduleName + " module markup is updated");
-             });
-          });
-
-        
     });
 
 
 
 });
 
-       
 
 
 
-      
-    
-   
-  
-  
-  
-  
+
+
+
+
+
+
+
+
 
 
 //   ;
