@@ -21,7 +21,8 @@
     "required:statics": "node bulkStatics",
 
     "watch:all": "npm run modules:watch & npm run static:watch & npm run required:watch",
-    "email": "concurrently --kill-others --raw \"npm run watch:all\" \"npx hs watch --initial-upload _dist/ email/\""
+    "email": "concurrently --kill-others --raw \"npm run watch:all\" \"npx hs watch --initial-upload _dist/ email/\"",
+    "upload:prod": "npx hs upload --account=production _dist/ email/ "
   },
   "repository": {
     "type": "git",
