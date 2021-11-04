@@ -1,0 +1,14 @@
+<mjml>
+    <mj-include path="../required_markup/head.mjml" />
+    <mj-body>
+        <!-- begin module -->
+        <mj-section padding-top="26px" padding-bottom="26px">
+            <mj-column >
+                <mj-text font-size="18px" font-weight="700" padding-top="0px" padding-bottom="0px" line-height="1.5" align="left" color="red" text-transform="uppercase" >
+                    {{ module.text }}   
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- end module -->
+    </mj-body>
+</mjml>

@@ -1,0 +1,29 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+{% extends '/email/email_static/base.html' %}
+
+{% block email-body %}
+    {% include '/email/email_static/header.html' %}
+     
+    {% module "module_207431895123" path="/email/email_modules/text", label="text" %}
+
+    {% include '/email/email_static/divider.html' %}
+
+
+    {% module "module_20273214812043423" path="/email/email_modules/section", label="Section Header" %}  
+
+    {% module "module_2020032123" path="/email/email_modules/image", label="Image" %}
+
+    {% module "module_2074319874895123" path="/email/email_modules/text", label="text" %}
+
+    
+
+
+
+
+    {% include '/email/email_static/footer.html' %}
+    
+
+{% endblock %}

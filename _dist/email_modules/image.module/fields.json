@@ -1,0 +1,19 @@
+[
+  {
+  "name": "image",
+  "label": "Image",
+  "required": false,
+  "locked": false,
+  "inline_help_text": "",
+  "help_text": "",
+  "responsive": true,
+  "resizable": true,
+  "show_loading" : false,
+  "type": "image",
+  "default": {
+    "size_type" : "auto",
+    "src": "https://source.unsplash.com/random",
+    "alt": null,
+    "loading": "disabled"}
+  }
+]

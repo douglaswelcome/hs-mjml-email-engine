@@ -1,0 +1,63 @@
+<mj-head>
+    <mj-preview>{% text "Preview Text" no_wrapper=True label="Preview Text for Email Clients"%}</mj-preview>
+    <mj-raw>
+
+       
+    </mj-raw>
+
+    <mj-attributes>
+        <mj-all font-family="Arial, sans-serif" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+
+        .btn > table > tbody > tr > td > p {
+        cursor:pointer!important;
+        }
+
+        .footer-link > div > p > a {
+        line-height: 1.3;
+        }
+
+        h1 {
+            font-size:32px;
+            font-family: Arial, sans-serif;
+            line-height: 1;
+        }
+
+        h3 {
+            font-size:20px;
+            font-family:  Arial, sans-serif;
+            text-transform: uppercase;
+            color: #929294;
+            line-height: 1;
+            
+        }
+
+        p, ul, ol, h1, h2, h3 {
+            padding:  0px 0px 16px 0px;
+            padding-top: 0px;
+            padding-bottom:16px;
+            margin: 0px;
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        ul, ol {
+            padding-left:24px!important;
+        }
+
+        .header-logo {
+            }
+
+            .header-logo > table {
+                width:50%;
+            }
+            
+
+
+    </mj-style>
+    
+    
+
+</mj-head>

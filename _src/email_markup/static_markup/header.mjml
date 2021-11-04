@@ -1,0 +1,12 @@
+<mjml>
+    <mj-include path="../required_markup/head.mjml" />
+    <mj-body>
+      <!-- begin module -->
+            <mj-section >
+                <mj-column >      
+                    <mj-image css-class="header-logo" src="https://thehustle.co/wp-content/uploads/2020/03/cropped-thehustle_logo_300w.png" href="https://thehustle.co/home/" align="center" padding-bottom="0px" padding-top="0px"></mj-image>
+                </mj-column>
+            </mj-section>
+    <!-- end module -->
+</mj-body>
+</mjml>
