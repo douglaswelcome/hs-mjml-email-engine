@@ -8,18 +8,15 @@
     "modules:create": "node createModule $npm_config_file",
     "modules:mjml": "mjml _src/email_markup/module_markup/$npm_config_file.mjml -o _dist/email_modules/$npm_config_file.module/module.html",
     "modules:hubify": "node hubifyModule $npm_config_file",
-    "modules:process" : "npm run modules:create && npm run modules:mjml && npm run modules:hubify",
-
+    "modules:process": "npm run modules:create && npm run modules:mjml && npm run modules:hubify",
     "static:watch": "onchange '_src/email_markup/static_markup/*' -- npm run static:process --file={{fileBaseNoExt}}",
     "static:process": "npm run static:mjml && npm run static:hubify",
     "static:hubify": "node hubifyStatic $npm_config_file",
     "static:mjml": "mjml _src/email_markup/static_markup/$npm_config_file.mjml -o _dist/email_static/$npm_config_file.html",
-
     "required:watch": "onchange '_src/email_markup/required_markup/head.mjml' -- npm run required:process",
     "required:process": "npm run required:modules && npm run required:statics",
     "required:modules": "node bulkModules",
     "required:statics": "node bulkStatics",
-
     "watch:all": "npm run modules:watch & npm run static:watch & npm run required:watch",
     "email": "concurrently --kill-others --raw \"npm run watch:all\" \"npx hs watch --initial-upload _dist/ email/\"",
     "upload:prod": "npx hs upload --account=production _dist/ email/ "
@@ -38,5 +35,8 @@
     "@hubspot/cli": "^3.0.9",
     "mjml": "^4.6.3",
     "onchange": "^7.0.2"
+  },
+  "dependencies": {
+    "concurrently": "^6.3.0"
   }
 }
