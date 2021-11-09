@@ -6,5 +6,10 @@
       
       {% endblock %}
     </mj-raw>
+<!-- insert start -->
+
+   
+    <!-- insert end -->
+
     </mj-body>
   </mjml>

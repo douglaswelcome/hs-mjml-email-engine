@@ -1,0 +1,38 @@
+donkey balls<!-- begin module -->
+        <mj-section padding="0" padding-top="1px"  background-color="black">
+            <mj-column >
+            </mj-column>
+        </mj-section>
+        <!-- end module --><!-- begin module -->
+        <mj-wrapper padding="0px 15px 15px 15px">
+            <mj-section css-class="round-border">
+                <mj-column background-color="#fff" vertical-align="bottom">
+                    <mj-text>
+                        <h1>Here's your footer</h1>
+                        <p>Get started Sonny</p>
+                        <p >
+                            {{ site_settings.company_name }}
+                            {{ site_settings.company_street_address_1 }}
+                            {{ site_settings.company_street_address_2 }}
+                            {{ site_settings.company_city }}
+                            {{ site_settings.company_state }}]
+                            {{ site_settings.company_zip }}
+                            {{ site_settings.company_country }}
+                            <br/>
+                            You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+                            <br/>
+                            Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+                            <br/>
+                            <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
+                        </p>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+        </mj-wrapper>
+        <!-- end module --><!-- begin module -->
+            <mj-section >
+                <mj-column >      
+                    <mj-image css-class="header-logo" src="https://thehustle.co/wp-content/uploads/2020/03/cropped-thehustle_logo_300w.png" href="https://thehustle.co/home/" align="center" padding-bottom="0px" padding-top="0px"></mj-image>
+                </mj-column>
+            </mj-section>
+    <!-- end module -->

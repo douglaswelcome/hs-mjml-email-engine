@@ -18,6 +18,12 @@
     "required:modules": "node bulkModules",
     "required:statics": "node bulkStatics",
     "watch:all": "npm run modules:watch & npm run static:watch & npm run required:watch",
+
+    "base:compile": "node compileBase && npm run base:mjml",
+    "base:mjml": "mjml _src/email_markup/base_files/base.mjml -o _dist/email_bases/base.html",
+
+
+
     "email": "concurrently --kill-others --raw \"npm run watch:all\" \"npx hs watch --initial-upload _dist/ email/\"",
     "upload:prod": "npx hs upload --account=production _dist/ email/ "
   },
