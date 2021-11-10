@@ -4,8 +4,8 @@ let allSections = "_src/email_markup/base_files/allSections.mjml"
 
 let compileMjml = () => {
 
-    return new Promise(function (resolve, reject) {
-        setTimeout(function () {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
 
             fs.readdir(staticSrc, (err, files) => {
                 if (err) {
@@ -31,7 +31,7 @@ let compileMjml = () => {
                 })
             });
             resolve();
-        }, 3000);
+        }, 10000);
     })
 
 }
